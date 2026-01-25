@@ -90,9 +90,9 @@ body {
 
 /* SCREENSHOT PLACEHOLDER */
 .screenshot {
-  width: 700px;
+  width: 620px;
   max-width: 90%;
-  height: 350px;
+  height: 420px;
   margin: 0 auto 50px;
   border: 2px solid rgba(255,255,255,0.15);
   display: flex;
@@ -103,7 +103,7 @@ body {
 }
 
 .screenshot img{
-    width: 650px;
+    width: 600px;
 }
 
 /* BUTTONS */
@@ -427,5 +427,6 @@ width: 200px;
                 font-size: 16px;
             }
         }
+
 
     
