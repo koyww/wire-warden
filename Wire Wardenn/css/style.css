@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Pixelify Sans", sans-serif;
+       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("../Assets/img/Background.gif") center/cover fixed;
+    min-height: 1600px;
+
+}
+
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 14px 20px rgb(0,0,0,0.1);
+    background: rgb(44, 44, 44);
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    transition: 0.4s;
+    border-radius: 30px;
+    margin: 10px 180px;
+    
+
+}
+
+.nav.shrink{
+    padding: 5px 20px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap:50px;
+    padding: 20px;
+}
+
+.nav-links a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 26px;
+    position: relative;
+
+}
+
+.nav-links a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    left:0;
+    height: 3px;
+    bottom:-2px;
+    background: white;
+    transition: all .3s ease;
+
+
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+   
+}
+
+.nav-links a:hover{
+     color:rgb(121, 121, 121);
+}
+
+
+
+.logo{
+    color: aliceblue;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+
+.home{
+    margin: auto;
+    padding: 200px 100px;
+    padding-bottom: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("../Assets/img/Background.gif") center/cover fixed;
+
+}
+
+.home-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.home-content{
+    width:100%;
+    justify-content: center;
+}
+
+.home-content h1{
+    background: rgb(43, 43, 43);
+    color: aliceblue;
+    font-size: 60px;
+    text-align: center;
+}
+
+.home-content p{
+    padding: 60px 0;
+    font-size: 26px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn button{
+    padding:18px 40px;
+    font-family: "Pixelify Sans", sans-serif;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(74, 134, 106);
+    color: #ffffff;
+    box-shadow: 0 14px 20px rgb(0,0,0,0.1);
+    cursor: pointer;
+    transition: all .3 ease, transform .3s;
+}
+.btn button:hover{
+    background-color: rgb(54, 97, 77);
+    transform: translateY(-1px);
+}
+
+
+.tester{
+    position: relative;
+    rotate: calc(20deg);
+    top:10px;
+    display: inline-block;
+    left: 460px;
+
+}
+
+.tester img{
+    width: 200px;
+    height: 150px;
+    image-rendering: pixelated;
+
+}
+.crimp{
+    position: relative;
+    rotate: calc(-20deg);
+    top:10px;
+    display: inline-block;
+    right: 250px;
+
+}
+
+.crimp img{
+    width: 150px;
+    height: 150px;
+    image-rendering: pixelated;
+
+}
+
+.about{
+    margin: auto;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    background: rgb(43, 43, 43);
+    color: aliceblue;
+}
+
+.about-container{
+    display: grid;
+    grid-template-columns: 200px 500px;
+    gap: 50px;
+
+    
+}
+
+.about-content{
+    padding: 2em;
+}
+
+.about-content h3{
+    text-align: center;
+}
