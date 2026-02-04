@@ -8,7 +8,6 @@ const images = document.querySelectorAll('.carousel-image');
         let currentIndex = 0;
         const totalImages = images.length;
 
-        // Create indicators
         for (let i = 0; i < totalImages; i++) {
             const indicator = document.createElement('button');
             indicator.classList.add('indicator');
@@ -48,16 +47,13 @@ const images = document.querySelectorAll('.carousel-image');
         nextBtn.addEventListener('click', nextSlide);
         prevBtn.addEventListener('click', prevSlide);
 
-        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') prevSlide();
             if (e.key === 'ArrowRight') nextSlide();
         });
 
-        // Auto-play (slides every 3 seconds)
         let autoPlayInterval = setInterval(nextSlide, 3000);
 
-        // Pause auto-play on hover
         const carouselContainer = document.querySelector('.carousel-container');
         carouselContainer.addEventListener('mouseenter', () => {
             clearInterval(autoPlayInterval);
@@ -70,11 +66,9 @@ const images = document.querySelectorAll('.carousel-image');
 
 
         function downloadAPK() {
-    // Ask for confirmation
     const userConfirmed = confirm('Do you want to download Wire Warden APK?\n\nFile size: ~78.5MB\nVersion: 1.0');
     
     if (userConfirmed) {
-        // User clicked "OK" - proceed with download
         const link = document.createElement('a');
         link.href = 'Assets/downloads/Wire.Warden.apk';
         link.download = 'WireWarden.apk';
@@ -82,7 +76,6 @@ const images = document.querySelectorAll('.carousel-image');
         link.click();
         document.body.removeChild(link);
     } else {
-        // User clicked "Cancel" - do nothing
         console.log('Download cancelled by user');
     }
 }
@@ -92,7 +85,6 @@ function toggleFAQ(element) {
             const answer = element.nextElementSibling;
             const isActive = answer.classList.contains('active');
             
-            // Close all other FAQs
             document.querySelectorAll('.faq-answer').forEach(ans => {
                 ans.classList.remove('active');
             });
@@ -100,7 +92,6 @@ function toggleFAQ(element) {
                 q.classList.remove('active');
             });
             
-            // Toggle current FAQ
             if (!isActive) {
                 answer.classList.add('active');
                 element.classList.add('active');
@@ -114,12 +105,10 @@ function toggleFAQ(element) {
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             
-            // Here you would typically send the data to a server
             console.log('Form submitted:', { name, email, message });
             
-            // Show success message
             alert('Thank you for your feedback! We\'ll get back to you soon.');
             
-            // Reset form
             event.target.reset();
+
         }
